@@ -17,9 +17,8 @@ module.exports.PixelIt = class PixelIt {
         ? config.scale * 0.01
         : 8 * 0.01;
     this.palette = config.palette || [
-      [140, 143, 174],
-      [88, 69, 99],
-      [62, 33, 55]
+      [0, 0, 0],
+      [255, 255, 255]
     ]
     this.maxHeight = config.maxHeight
     this.maxWidth = config.maxWidth
@@ -64,8 +63,8 @@ module.exports.PixelIt = class PixelIt {
       scaledW = this.drawTo.width * this.scale;
       scaledH = this.drawTo.height * this.scale;
       
-      tempCanvas.width = Math.max(scaledW, scaledH ) + 50;
-      tempCanvas.height = Math.max(scaledW, scaledH ) + 50;
+      tempCanvas.width = Math.max(scaledW, scaledH) + 50;
+      tempCanvas.height = Math.max(scaledW, scaledH) + 50;
     }
 
     const tempContext = tempCanvas.getContext("2d");
