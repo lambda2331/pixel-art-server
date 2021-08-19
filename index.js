@@ -13,7 +13,7 @@ app.post("/generate-art", cors(), async (request, response) => {
     const { base64: from, palette, scale } = request.body
     const art = new PixelIt({ from, palette, scale })
     const pixerArt = art.pixelate()
-    console.log(pixerArt)
+    
     response.send({
       pixelArt: pixerArt
     })
